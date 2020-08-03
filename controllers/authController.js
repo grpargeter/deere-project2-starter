@@ -32,6 +32,7 @@ router.post("/signup", (req, res) => {
             {
               username: newUser.username,
               id: newUser.id,
+              email: newUser.email,
             },
             process.env.JWT_SECRET,
             {

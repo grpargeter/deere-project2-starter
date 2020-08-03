@@ -1,0 +1,9 @@
+body {
+  color: red;
+  background-color: yellow;
+}
+img {
+  width: 200px;
+  height: auto;
+  align-content: center;
+}

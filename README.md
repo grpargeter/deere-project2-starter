@@ -41,3 +41,15 @@ You have the following routes available.
 - [Pokemon Express Solution](https://git.generalassemb.ly/jdr-0622/pokemon-express-sequelize6)
 - [Google Routes Spreadsheet](https://docs.google.com/spreadsheets/d/14-LHKXLtEkp_vKEz3qSKjREnrmSyzQ9fimTlmrPsZsQ/edit#gid=0)
 - [JSON Web Tokens](https://jwt.io/)
+
+//User Stories
+//I would like to be able create new users on the site.
+//I should be able to delete my own user account if needed
+//I should be able to update/edit my account with new password/username
+//I should be able to update image links in my account
+//I would like have a title required for each image
+//I would like the user to add a description regarding the sunset
+//I would like other users to be able to view anyones pictures
+//The user should be able to remove images they uploaded but not others
+//The user should provide the location of where the image was taken.
+//I would like to be able to search by location for all pictures.
