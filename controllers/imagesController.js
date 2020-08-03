@@ -5,9 +5,9 @@ const UserModel = require("../models").User;
 
 //Index Route shows entire array/database
 router.get("/", (req, res) => {
-  Sunsets.findAll().then((allPicturesFromDb) => {
+  Sunsets.findAll().then((images) => {
     res.render("images/index.ejs", {
-      sunsets: allPicturesFromDb,
+      images: images,
     });
   });
 });
@@ -32,7 +32,7 @@ router.post("/", (req, res) => {
 });
 
 //Edit route
-router.get("/:id", (req, res) => {
+router.get("/:id/edit", (req, res) => {
   Sunsets.findByPk(req.params.id).then((imageToEdit) => {
     res.render("images/edit.ejs", {
       image: imageToEdit,

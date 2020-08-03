@@ -11,7 +11,8 @@
     <h1>Sunset Image</h1>
     <ul class="sunsets">
       <li><%= image.title %></li>
-      <img src="<%= image.url%>" alt="" />
+      <img src="<%= image.url%>" alt="the beast" />
+      <p><%= image.desc %></p>
     </ul>
     <form action="/images/<%= image.id %>?_method=DELETE" method="POST">
       <input type="submit" value="Delete" />

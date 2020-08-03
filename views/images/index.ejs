@@ -8,5 +8,17 @@
   </head>
   <body>
     <h1>Image Collection Index Page!</h1>
+    <a href="/images/new">Add new sunset!</a>
+    <ul class="sunsets">
+      <% for (let i = 0; i < images.length; i++) { %>
+      <li><a href="/images/<%= images[i].id%>"><%= images[i].title %></a></li>
+      <img src="<%= images[i].url%>" alt="" />
+      <form action="/images/<%=images[i].id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" />
+      </form>
+      <a href="/images/<%=images[i].id%>/edit">Edit</a>
+      <br /><br />
+      <% } %>
+    </ul>
   </body>
 </html>

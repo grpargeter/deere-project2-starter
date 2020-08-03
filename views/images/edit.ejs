@@ -8,12 +8,12 @@
 
   <body>
     <h1>Edit Sunset Page</h1>
-    <form action="/images/<%=images.id%>?_method=PUT" method="POST">
-      Title: <input type="text" name="title" value="<%=images.title%>" /><br />
-      Image: <input type="text" name="url" value="<%=images.url%>" /><br />
+    <form action="/images/<%=image.id%>?_method=PUT" method="POST">
+      Title: <input type="text" name="title" value="<%=image.title%>" /><br />
+      Image: <input type="text" name="url" value="<%=image.url%>" /><br />
 
       <br />
-      <input type="submit" name="" value="Add Sunset" />
+      <input type="submit" name="" value="Update Sunset" />
     </form>
   </body>
 </html>
