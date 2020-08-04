@@ -13,7 +13,12 @@
       Sunset URL: <input type="text" name="url" /><br />
       Location: <input type="text" name="location" /><br />
       Description of Sunset: <input type="text" name="desc" /><br />
+      <br />
       <input type="submit" name="" value="Add New Sunset" />
+    </form>
+
+    <form action="/api/images" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" />
     </form>
   </body>
 </html>

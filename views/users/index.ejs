@@ -10,9 +10,9 @@
     <h1>The Sunset Database...Welcome!!</h1>
     <h3>A place to view and share sunset pictures.</h3>
     <nav>
-      <button><a href="/auth/signup">Sign Up</a></button>
-      <button><a href="/auth/login">Log In</a></button>
-      <button><a href="/auth/logout">Log Out</a></button>
+      <button id="sign"><a href="/auth/signup">Sign Up</a></button>
+      <button id="login"><a href="/auth/login">Log In</a></button>
+      <button id="logout"><a href="/auth/logout">Log Out</a></button>
     </nav>
     <img
       id="homeimg"
@@ -20,9 +20,11 @@
       alt="homepage"
     />
     <p>
-      <button><a href="/images/new">Add a new Sunset Picture</a></button>
+      <button id="new">
+        <a href="/images/new">Add a new Sunset Picture</a>
+      </button>
 
-      <button><a href="/images">View Current Gallary</a></button>
+      <button id="all"><a href="/images">View Current Gallary</a></button>
     </p>
   </body>
 </html>

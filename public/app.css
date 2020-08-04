@@ -1,6 +1,6 @@
 body {
   color: black;
-  background-image: url(https://res.cloudinary.com/do6js4ole/image/upload/v1596467285/burnett_okgbsg.jpg);
+  background-color: yellow;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -8,6 +8,7 @@ img {
   width: 200px;
   height: auto;
   align-content: center;
+  border-radius: 100px;
 }
 #homeimg {
   display: block;
@@ -19,6 +20,7 @@ img {
 }
 h1 {
   text-align: center;
+  font-family: cursive;
 }
 h3 {
   text-align: center;
@@ -34,7 +36,10 @@ button {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #ffffff;
-  background-color: #4eb5f1;
+  background-color: #eaf6f4;
   text-align: center;
   transition: all 0.2s;
+}
+#sign {
+  margin-left: auto;
 }
