@@ -32,5 +32,27 @@ router.delete("/:id", (req, res) => {
     res.redirect("/");
   });
 });
+// GET USERS PROFILE
+
+// router.get("/profile/:id", (req, res) => {
+//   // IF USER ID FROM TOKEN MATCHES THE REQUESTED ENDPOINT, LET THEM IN
+//   if (req.user.id == req.params.id) {
+//     User.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: Sunsets,
+//           attributes: ["id", "name"],
+//         },
+//       ],
+//     }).then((userProfile) => {
+//       res.render("users/profile.ejs", {
+//         user: userProfile,
+//       });
+//     });
+//   } else {
+//     // res.json("unauthorized");
+//     res.redirect("/");
+//   }
+// });
 
 module.exports = router;
