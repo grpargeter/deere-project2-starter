@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Sunsets = require("../models").Sunsets;
-const UserModel = require("../models").User;
+const User = require("../models").User;
 
 //Index Route shows entire array/database
 router.get("/", (req, res) => {
@@ -17,9 +17,9 @@ router.get("/new", (req, res) => {
 });
 // SHOW ROUTE - GET ONE Sunset Picture
 router.get("/:id", (req, res) => {
-  Sunsets.findByPk(req.params.id).then((singleImage) => {
+  Sunsets.findByPk(req.params.id, { include: [User] }).then((image) => {
     res.render("images/show.ejs", {
-      image: singleImage,
+      image: image,
     });
   });
 });

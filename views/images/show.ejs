@@ -8,13 +8,15 @@
   </head>
 
   <body>
-    <h1>Sunset Image</h1>
+    <h1>Sunset Image Show Page</h1>
     <ul class="sunsets">
       <li><%= image.title %></li>
-      <img src="<%= image.url%>" alt="the beast" />
+      <img src="<%= image.url%>" alt="" />
       <p><%= image.desc %></p>
+      <p><%= image.location %></p>
     </ul>
     <form action="/images/<%= image.id %>?_method=DELETE" method="POST">
+      <p>This image was submitted by <%= image.User.name%></p>
       <input type="submit" value="Delete" />
     </form>
     <a href="/images/<%= image.id %>/edit">Edit</a>

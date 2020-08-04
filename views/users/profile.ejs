@@ -27,6 +27,17 @@
       <input type="submit" value="Delete User" />
     </form>
 
+    <h3>Sunset Images added by you:</h3>
+    <% for (let i = 0; i < user.Sunsets.length; i++){ %>
+    <li>
+      <a href="/images/<%=user.Sunsets[i].name%>"><%=user.Sunsets[i].title%></a>
+      <br />
+      <img src="<%= user.Sunsets[i].url%>" alt="" />
+      <br />
+    </li>
+    <br />
+    <% } %>
+
     <br /><br />
     <a href="/">Back to Homepage</a>
   </body>
