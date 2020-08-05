@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/imagesindex.css" />
-    <title>Sunset Collection!!</title>
-  </head>
-  <body>
-    <h1>The Sunset Gallery!</h1>
-    <a href="/images/new">Submit a new image to our Gallery</a>
-    <br />
-    <br />
-    <a href="/">Take Me Home...</a>
-    <ul class="sunsets">
-      <% for (let i = 0; i < images.length; i++) { %>
-      <li><a href="/images/<%= images[i].id%>"><%= images[i].title %></a></li>
-      <img src="<%= images[i].url%>" alt="" />
-      <br /><br />
-      <% } %>
-    </ul>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/imagesindex.css" />
+  <title>Sunset Collection!!</title>
+</head>
+
+<body>
+  <h1>The Gallery!</h1>
+  <ul class="sunsets" style="list-style: none;">
+    <% for (let i = 0; i < images.length; i++) { %>
+    <li><a href="/images/<%= images[i].id%>"><%= images[i].title %></a></li>
+    <img src="<%= images[i].url%>" alt="" />
+    <br /><br />
+    <% } %>
+  </ul>
+  <div>
+    <button id="new">
+      <a href="/images/new">Add a new Sunset Picture</a>
+    </button>
+
+    <button id="all"><a href="/">Return Home</a></button>
+  </div>
+</body>
+
 </html>

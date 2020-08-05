@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/imagesindex.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <h1>Sunset Image Show Page</h1>
-    <ul class="sunsets">
-      <li>"<%= image.title %>"</li>
-      <img src="<%= image.url%>" alt="" />
-      <p>Description:"<%= image.desc %>"</p>
-      <p>
-        This sunset is from <%= image.location %> and submitted by <%=
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/imagesindex.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>"<%= image.title %>"</h1>
+  <ul class="sunsets" style="list-style: none">
+    <img src="<%= image.url%>" alt="" />
+    <p><%= image.desc %>
+      <%= image.location %> submitted by - <%=
         image.User.name%>
-      </p>
-    </ul>
-    <% if (loggedInUser === image.userId) {%>
-    <form action="/images/<%= image.id %>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete" />
-    </form>
+    </p>
+  </ul>
+  <% if (loggedInUser === image.userId) {%>
+  <form action="/images/<%= image.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete" />
+  </form>
+  <br />
+  <form action="/images/<%= image.id %>/edit" method="GET">
+    <input type="submit" value="Edit" />
+  </form>
+  <%}%>
     <br />
-    <form action="/images/<%= image.id %>/edit" method="GET">
-      <input type="submit" value="Edit" />
-    </form>
-    <%}%>
-    <br />
-    <a href="/">Take Me Home...</a>
+    </button>
+        <button id="all"><a href="/">Return Home</a></button>
   </body>
 </html>

@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/app.css" />
-    <title>User Profile Page</title>
-  </head>
 
-  <body>
-    <h1>Welcome to <%= user.name %>'s Profile Page</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/app.css" />
+  <title>User Profile Page</title>
+</head>
 
-    <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
-      Name: <input type="text" name="name" value="<%=user.name%>" /><br />
-      <br />
-      Username:
-      <input type="text" name="username" value="<%=user.username%>" />
-      <br />
-      <br />
-      Password:
-      <input type="password" name="password" value="<%=user.password%>" /><br />
-      <br />
-      <input type="submit" value="Update Profile" />
-    </form>
+<body>
+  <h1>Welcome to <%= user.name %>'s Profile Page</h1>
+
+  <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
+    Name: <input type="text" name="name" value="<%=user.name%>" /><br />
     <br />
-    <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete User" />
-    </form>
-    <h3>Sunset Images added by you:</h3>
-    <% for (let i = 0; i < user.Sunsets.length; i++){ %>
-    <li>
-      <a href="/images/<%=user.Sunsets[i].name%>"><%=user.Sunsets[i].title%></a>
-      <br />
-      <img src="<%= user.Sunsets[i].url%>" alt="" />
-      <br />
-    </li>
+    Username:
+    <input type="text" name="username" value="<%=user.username%>" />
     <br />
-    <% } %>
+    <br />
+    Password:
+    <input type="password" name="password" value="<%=user.password%>" /><br />
+    <br />
+    <input type="submit" value="Update Profile" />
+  </form>
+  <br />
+  <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete User" />
+  </form>
+  <h3>Your Sunset Gallery:</h3>
+  <% for (let i = 0; i < user.Sunsets.length; i++){ %>
+  <ul>
+    <a href="/images/<%=user.Sunsets[i].name%>"></a><%=user.Sunsets[i].title%></a>
+    <br />
+    <img src="<%= user.Sunsets[i].url%>" alt="" />
+    <br />
+  </ul>
+  <br />
+  <% } %>
+  <br /><br />
+  </button>
 
-    <br /><br />
-    <a href="/">Take Me Home...</a>
-  </body>
+  <button id="all"><a href="/">Return Home</a></button>
+</body>
+
 </html>

@@ -26,7 +26,7 @@ router.get("/", (req, res) => {
     });
   });
 });
-//put this above your show.ejs file new route form
+//New sunset route
 router.get("/new", (req, res) => {
   res.render("images/new.ejs", {
     userId: req.user.id,
@@ -35,8 +35,6 @@ router.get("/new", (req, res) => {
 // SHOW ROUTE - GET ONE Sunset Picture
 router.get("/:id", (req, res) => {
   Sunsets.findByPk(req.params.id, { include: [User] }).then((image) => {
-    console.log(req.user.id);
-    console.log(image);
     res.render("images/show.ejs", {
       image: image,
       loggedInUser: req.user.id,
@@ -46,8 +44,8 @@ router.get("/:id", (req, res) => {
 
 // Post route - Takes form data and creates a new //Sunset Entry working route....
 router.post("/", parser.single("image"), (req, res) => {
+  req.body.url = req.file.path;
   Sunsets.create(req.body).then((newImage) => {
-    console.log(req.user.id);
     res.redirect("/images");
   });
 });

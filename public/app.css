@@ -28,7 +28,13 @@ h1 {
 h3 {
   text-align: center;
 }
+div {
+  position: absolute;
+  right: 325px;
+  width: 300px;
+  padding: 10px;
 
+}
 button {
   display: inline-block;
   padding: 0.3em 1.2em;
