@@ -29,14 +29,17 @@ router.get("/", (req, res) => {
 //put this above your show.ejs file new route form
 router.get("/new", (req, res) => {
   res.render("images/new.ejs", {
-    userId: req.user.id
-  })
+    userId: req.user.id,
+  });
 });
 // SHOW ROUTE - GET ONE Sunset Picture
 router.get("/:id", (req, res) => {
   Sunsets.findByPk(req.params.id, { include: [User] }).then((image) => {
+    console.log(req.user.id);
+    console.log(image);
     res.render("images/show.ejs", {
-      image: image
+      image: image,
+      loggedInUser: req.user.id,
     });
   });
 });

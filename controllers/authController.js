@@ -84,6 +84,8 @@ router.post("/login", (req, res) => {
           return res.sendStatus(400);
         }
       });
+    } else {
+      return res.sendStatus(400);
     }
   });
 });

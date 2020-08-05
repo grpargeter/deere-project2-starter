@@ -20,17 +20,12 @@
       Password:
       <input type="password" name="password" value="<%=user.password%>" /><br />
       <br />
-      <input type="submit" value="Edit Profile" />
+      <input type="submit" value="Update Profile" />
     </form>
     <br />
     <form action="/users/<%= user.id %>?_method=DELETE" method="POST">
       <input type="submit" value="Delete User" />
     </form>
-
-    <button id="new">
-      <a href="/images/new">Add a new Sunset Picture</a>
-    </button>
-
     <h3>Sunset Images added by you:</h3>
     <% for (let i = 0; i < user.Sunsets.length; i++){ %>
     <li>

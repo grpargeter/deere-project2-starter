@@ -1,8 +1,11 @@
 body {
   color: black;
-  background-color: yellow;
+  background-image: url(https://res.cloudinary.com/do6js4ole/image/upload/v1596488787/background_r9mjvf.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+nav {
+  margin-top: 10px;
 }
 img {
   width: 200px;
@@ -35,11 +38,18 @@ button {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: #ffffff;
+  color: black;
   background-color: #eaf6f4;
   text-align: center;
   transition: all 0.2s;
 }
 #sign {
-  margin-left: auto;
+  margin-left: 850px;
+  margin-top: 50px;
+}
+#login {
+  margin-top: 1px;
+}
+#new {
+  margin-top: auto;
 }

@@ -4,9 +4,12 @@ const app = express();
 const methodOverride = require("method-override");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
-
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
+app.use(express.static("public"));
 const verifyToken = (req, res, next) => {
-  let token = req.cookies.jwt
+  let token = req.cookies.jwt;
   // COOKIE PARSER GIVES YOU A .cookies PROP, WE NAMED OUR TOKEN jwt
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decodedUser) => {
@@ -21,10 +24,6 @@ const verifyToken = (req, res, next) => {
     next();
   });
 };
-app.use(cookieParser());
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
-app.use(express.static("public"));
 
 // HOMEPAGE
 app.get("/", (req, res) => {
@@ -32,7 +31,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", require("./controllers/authController.js"));
-app.use("/users", require("./controllers/usersController.js"));
+app.use("/users", verifyToken, require("./controllers/usersController.js"));
 app.use("/images", verifyToken, require("./controllers/imagesController.js"));
 
 app.listen(process.env.PORT, () => {

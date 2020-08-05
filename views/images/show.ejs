@@ -10,22 +10,23 @@
   <body>
     <h1>Sunset Image Show Page</h1>
     <ul class="sunsets">
-      <li><%= image.title %></li>
+      <li>"<%= image.title %>"</li>
       <img src="<%= image.url%>" alt="" />
-      <p><%= image.desc %></p>
-      <p><%= image.location %></p>
+      <p>Description:"<%= image.desc %>"</p>
+      <p>
+        This sunset is from <%= image.location %> and submitted by <%=
+        image.User.name%>
+      </p>
     </ul>
+    <% if (loggedInUser === image.userId) {%>
     <form action="/images/<%= image.id %>?_method=DELETE" method="POST">
-      <p>This image was submitted by <%= image.User.name%></p>
       <input type="submit" value="Delete" />
     </form>
     <br />
-    <button id="editButton" value="Edit Image">Edit</button>
-    <script type="text/javascript">
-      document.getElementById("editButton").onclick = function () {
-        location.href = "/images/<%= image.id %>/edit";
-      };
-    </script>
+    <form action="/images/<%= image.id %>/edit" method="GET">
+      <input type="submit" value="Edit" />
+    </form>
+    <%}%>
     <br />
     <a href="/">Take Me Home...</a>
   </body>
