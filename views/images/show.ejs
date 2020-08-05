@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/app.css" />
+    <link rel="stylesheet" type="text/css" href="/imagesindex.css" />
     <title>Document</title>
   </head>
 
@@ -19,7 +19,14 @@
       <p>This image was submitted by <%= image.User.name%></p>
       <input type="submit" value="Delete" />
     </form>
-    <a href="/images/<%= image.id %>/edit">Edit</a>
-    <br /><br />
+    <br />
+    <button id="editButton" value="Edit Image">Edit</button>
+    <script type="text/javascript">
+      document.getElementById("editButton").onclick = function () {
+        location.href = "/images/<%= image.id %>/edit";
+      };
+    </script>
+    <br />
+    <a href="/">Take Me Home...</a>
   </body>
 </html>

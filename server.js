@@ -7,10 +7,7 @@ const cookieParser = require("cookie-parser");
 
 const verifyToken = (req, res, next) => {
   let token = req.cookies.jwt
-  // let token = req.headers.cookie.split("").splice(4).join("");
   // COOKIE PARSER GIVES YOU A .cookies PROP, WE NAMED OUR TOKEN jwt
-
-  // console.log(req.headers.cookie.split("").splice(4).join(""));
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decodedUser) => {
     if (err || !decodedUser) {
