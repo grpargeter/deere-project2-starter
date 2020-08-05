@@ -12,7 +12,7 @@ cloudinary.config({
 });
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
-  params: { folder: "assets" },
+  folder: "demo",
   allowedFormats: ["jpg", "png"],
   transformation: [{ width: 500, height: 500, crop: "limit" }],
 });
@@ -45,25 +45,12 @@ router.get("/:id", (req, res) => {
 });
 
 // Post route - Takes form data and creates a new //Sunset Entry working route....
-router.post("/", (req, res) => {
+router.post("/", parser.single("image"), (req, res) => {
   Sunsets.create(req.body).then((newImage) => {
     console.log(req.user.id);
     res.redirect("/images");
   });
 });
-
-// router.post("/", parser.single("image"), (req, res) => {
-//   console.log(req.file); // to see what is returned to you
-//   console.log(req.user.id);
-//   res.send(req.file);
-
-//   // const image = {};
-//   // image.url = req.file.url;
-//   // image.id = req.file.public_id;
-//   // Image.create(image) // save image information in database
-//   //   .then((newImage) => res.json(newImage))
-//   //   .catch((err) => console.log(err));
-// });
 
 //Edit route
 router.get("/:id/edit", (req, res) => {
