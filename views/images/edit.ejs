@@ -5,11 +5,12 @@
   <meta charset="utf-8" />
   <title></title>
   <link rel="stylesheet" href="/app.css" />
+  <link rel="icon" href="https://img.icons8.com/fluent/48/000000/sunset.png">
 </head>
 
 <body>
   <h1>Edit Sunset Page</h1>
-  <form action="/images/<%=image.id%>?_method=PUT" method="POST">
+  <form action=" /images/<%=image.id%>?_method=PUT" method="POST">
     Title: <input type="text" name="title" value="<%=image.title%>" /><br />
     Image: <input type="text" name="url" value="<%=image.url%>" /><br />
     Description:

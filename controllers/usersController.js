@@ -41,7 +41,6 @@ router.get("/profile/:id", (req, res) => {
       include: [
         {
           model: Sunsets,
-          // attributes: ["id", "name"],
         },
       ],
     }).then((userProfile) => {

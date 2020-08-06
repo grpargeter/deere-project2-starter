@@ -1,19 +1,17 @@
-@media screen and (max-width: 800px) { 
 
-}
 body {
   color: black;
   background-image: url(https://res.cloudinary.com/do6js4ole/image/upload/v1596488787/background_r9mjvf.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  min-width:300px
-}
+ }
 img {
-  width: 600px;
+  width: 800px;
   height: auto;
   align-content: center;
-  border-radius: 100px;
+  border-radius: 50px;
+ border: black, 50px;
 }
 #homeimg {
   display: block;
@@ -21,10 +19,12 @@ img {
   margin-right: auto;
   width: 35%;
   height: 35%;
+  border: black;
 }
 h1 {
   text-align: center;
   font-family: cursive;
+  font-size: xx-large;
 }
 h3 {
   text-align: center;
