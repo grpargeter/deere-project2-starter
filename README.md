@@ -12,10 +12,11 @@ As a avid picture taker of sunsets I wanted to create an application my wife and
 ## Wireframes
 
 ### Entity Relationship Diagram:
+![Sunset Gallery ERD](/images/SunsetDB.png)
 
 
 ### Wireframes
-
+![Sunset Gallery Homepage](/images/Homepage.png)
 
 
 ## User Stories
