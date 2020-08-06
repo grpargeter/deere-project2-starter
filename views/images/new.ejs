@@ -8,12 +8,11 @@
 </head>
 
 <body>
-  <h1>New Sunset Page</h1>
+  <h1>Sunset Creations...</h1>
   <form action="/images" method="POST" enctype="multipart/form-data">
     Title: <input type="text" name="title" /><br />
     Location: <input type="text" name="location" /><br />
     Description of Sunset: <input type="text" name="desc" /> <br />
-    <input type="hidden" name="url" /> <br />
     <input type="hidden" name="userId" value=<%=userId%> />
     <br />
     <input type="file" name="image" />

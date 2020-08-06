@@ -11,13 +11,20 @@ h1 {
 }
 body {
   color: black;
-  background-color: yellow;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(https://res.cloudinary.com/do6js4ole/image/upload/v1596488787/background_r9mjvf.jpg);
 }
 img {
-  width: 300px;
-  height: auto;
+  width: 200px;
+  height: 200px;
   align-content: center;
+  border-radius: 100px;
   }
+ul {
+  display:flexbox;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}

@@ -4,9 +4,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-nav {
-  margin-top: 10px;
-}
 img {
   width: 200px;
   height: auto;
@@ -51,11 +48,6 @@ button {
 }
 #sign {
   margin-left: 850px;
-  margin-top: 50px;
+  
 }
-#login {
-  margin-top: 1px;
-}
-#new {
-  margin-top: auto;
-}
+

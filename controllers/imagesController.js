@@ -26,13 +26,14 @@ router.get("/", (req, res) => {
     });
   });
 });
-//New sunset route
+//New Route
 router.get("/new", (req, res) => {
+  console.log(req.user.id)
   res.render("images/new.ejs", {
     userId: req.user.id,
   });
 });
-// SHOW ROUTE - GET ONE Sunset Picture
+// SHOW ROUTE - GET ONE Item from DB
 router.get("/:id", (req, res) => {
   Sunsets.findByPk(req.params.id, { include: [User] }).then((image) => {
     res.render("images/show.ejs", {

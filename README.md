@@ -1,55 +1,109 @@
-## Deere Project 2 Starter Code
+# Project Overview
 
-## Set Up
+## Project Description
 
-1. Fork and clone this repo
-1. `cd` into the folder and run `npm install`
-1. In the root of your app, `touch .env` and add:
+As a avid picture taker of sunsets I wanted to create an application my wife and her friends can use to upload, tag and share their sunsets with each other.
 
-   ```bash
-   PORT=3000
-   JWT_SECRET=pancakes
-   ```
+## Project Links
 
-1. Check out your `config/config.json` file. You'll need to create a database called `project2_development`
-1. Sequelize is included in the app. You have a `User` model. Run `db:migrate` to create the `Users` table in your database.
-1. Run `nodemon` and go to the Homepage: `localhost:3000/`
+- [github repo]()
+- [deployment]()
 
-![](https://i.imgur.com/uuhrOxQ.png)
+## Wireframes
 
-<br>
+### Entity Relationship Diagram:
 
-## Routes
 
-You have the following routes available.
+### Wireframes
 
-#### controllers/authController.js
 
-- GET and POST `localhost:3000/auth/signup`
-- GET and POST `localhost:3000/auth/login`
-- GET `localhost:3000/auth/logout`
 
-#### controllers/usersController.js
+## User Stories
 
-- GET `localhost:3000/profile/:id`
+### 1. User Story One
 
-<br>
+I would like to have each user be able create their own account on the site.
 
-## Additional Resources
+-Complete
 
-- [Fruit App Solution](https://git.generalassemb.ly/jdr-0622/fruit-app-in-class)
-- [Pokemon Express Solution](https://git.generalassemb.ly/jdr-0622/pokemon-express-sequelize6)
-- [Google Routes Spreadsheet](https://docs.google.com/spreadsheets/d/14-LHKXLtEkp_vKEz3qSKjREnrmSyzQ9fimTlmrPsZsQ/edit#gid=0)
-- [JSON Web Tokens](https://jwt.io/)
+### 2. User Story Two
 
-//User Stories
-//I would like to be able to create a user account
-//I should be able to delete my user account if needed
-//I should be able to update/edit my account with new password/username
-//I should be able to update images I have submitted
-//I would like have a title required for each image
-//I would like the user to add a description regarding their submission
-//I would like other users to be able to view anyones pictures in the gallery
-//The user should be able to delete their images
-//The user should be able to provide the location of where the image was taken.
-//I would like user to have to log in to view any images in the gallery
+I would like users to be able to login in and stay logged in until they choose to logout.
+
+-Complete
+### 3. User Story Three
+
+I would like the users to have the ablity to view all submission in one location.
+
+-Complete -Created a "Gallery" page.
+
+### 4. User Story Four
+
+I would like everyone to be able to delete their own submissions but not other users.
+
+-Complete 
+
+### 5. User Story Five
+
+I would like to have users be required to enter a "Title" for the submission.
+
+-Complete
+
+### 6. User Story Six
+
+I would like users to be able to upload images directly from the app to the cloud to save local storage.
+
+-Completed using Cloudinary API
+
+### 7. User Story Seven
+
+I would like to give the users the option to add a description to their picture for others to read.
+-Complete provided field for description
+
+### 8. User Story Eight
+
+Users should be able to edit the title and description of thier pictures but other users.
+
+-Complete 
+
+### 9. User Story Nine
+
+Users should be able to provide location detail for the picture uploads.
+
+-Complete
+
+### 10. User Story Ten
+
+Users should only be able to upload JPG and PNG files for compatiblity issues.
+
+-Complete Set format its the imagescontroller Couldinary settings.
+
+## MVP File Structure
+
+Views
+
+- Users
+  - index.ejs - Landing page user can login/out from here.
+  - signup.ejs - User can create an account
+  - login.ejs - Page where users can login
+  - profile.ejs - Users can edit account details and see their submissions
+  
+- images
+  - Show.ejs - Show individual image submissions
+  - Index.ejs - Shows gallery of all images
+  - Edit.ejs - Images can be edited from here
+  - New.ejs - Users can upload images and provide description, location and title.
+
+Models
+
+- sunsets.js defines sunset table fields
+- index.js required by sequelize
+- user.js defines users table fields
+
+
+Controllers
+
+- authController controls login and signup functions
+- imagesController.js - controls all tasks around viewing/creating images
+- usersContorller.js - controls all tasks around user account details.
+
