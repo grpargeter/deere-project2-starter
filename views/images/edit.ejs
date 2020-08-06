@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <link rel="stylesheet" href="/app.css" />
-  </head>
 
-  <body>
-    <h1>Edit Sunset Page</h1>
-    <form action="/images/<%=image.id%>?_method=PUT" method="POST">
-      Title: <input type="text" name="title" value="<%=image.title%>" /><br />
-      Image: <input type="text" name="url" value="<%=image.url%>" /><br />
-      Description:
-      <input type="text" name="desc" value="<%=image.desc%>" /><br />
-      Location:<input
-        type="text"
-        name="location"
-        value="<%=image.location%>"
-      /><br />
-      <br />
-      <input type="submit" name="" value="Update Sunset" />
-    </form>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+
+<body>
+  <h1>Edit Sunset Page</h1>
+  <form action="/images/<%=image.id%>?_method=PUT" method="POST">
+    Title: <input type="text" name="title" value="<%=image.title%>" /><br />
+    Image: <input type="text" name="url" value="<%=image.url%>" /><br />
+    Description:
+    <input type="text" name="desc" value="<%=image.desc%>" /><br />
+    Location:<input type="text" name="location" value="<%=image.location%>" /><br />
+    <br />
+    <input type="submit" name="" value="Update Sunset" />
+    </button>
+    <button id="all"><a href="/">Return Home</a></button>
+  </form>
+</body>
+
 </html>

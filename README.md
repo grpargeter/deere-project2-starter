@@ -2,7 +2,7 @@
 
 ## Project Description
 
-As a avid picture taker of sunsets I wanted to create an application my wife and her friends can use to upload, tag and share their sunsets with each other.
+As a avid picture taker of sunset pictures I wanted to create an app my wife and her friends can use to upload, describe and share their photos with each other.
 
 ## Project Links
 
