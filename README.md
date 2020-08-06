@@ -6,8 +6,8 @@ As a avid picture taker of sunset pictures I wanted to create an app my wife and
 
 ## Project Links
 
-- [github repo]()
-- [deployment]()
+- [github repo](https://github.com/grpargeter/deere-project2-starter)
+- [deployment](https://sunsetconnection.herokuapp.com/)
 
 ## Wireframes
 

@@ -12,8 +12,9 @@
   <h1>"<%= image.title %>"</h1>
   <ul class="sunsets" style="list-style: none">
     <img src="<%= image.url%>" alt="" />
-    <p><%= image.desc %>
-      <%= image.location %> submitted by - <%=
+    <p>Title:"<%= image.desc %>"<br>
+      This photo was taken in <%= image.location %><br>
+      Submitted by - <%=
         image.User.name%>
     </p>
   </ul>
