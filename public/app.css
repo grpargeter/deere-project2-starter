@@ -7,56 +7,65 @@ body {
   position: relative;
  }
 img {
-  width: 800px;
+  width:400px;
   height: auto;
   align-content: center;
   border-radius: 50px;
  border: black, 50px;
+ transition: width 2s, height 4s;
 }
 #homeimg {
+  display: flex;
+  flex-direction: row;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 35%;
   height: 35%;
   border: black;
+  transition: width 2s, height 4s;
 }
 h1 {
-  text-align: center;
-  font-family: cursive;
-  font-size: xx-large;
+  font-size: 50px;
+animation-duration: 3s;
+animation-name:slidein;
+font-family: cursive;
+text-align: center;
 }
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+  
+
 h3 {
+  animation-duration: 3s;
+animation-name:slidein;
   text-align: center;
   font-family: cursive;
 }
 div {
-  position: absolute;
-  right: 325px;
-  width: 300px;
-  padding: 10px;
-
-}
-button {
-  display: inline-block;
-  padding: 0.3em 1.2em;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 2em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: black;
-  background-color: #eaf6f4;
+  display: flex;
+  flex-direction: row;
   text-align: center;
-  transition: all 0.2s;
-  position: relative;
-}
-#sign {
-  margin-left: 850px;
-  
+  justify-content: center;
 }
 
 nav {
-  align-items: center;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }

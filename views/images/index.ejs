@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/imagesindex.css" />
+  <link rel="stylesheet" type="text/css" href="/app.css" />
   <link rel="icon" href="https://img.icons8.com/fluent/48/000000/sunset.png">
 
   <title>Sunset Collection!!</title>
@@ -20,11 +20,13 @@
     <% } %>
   </ul>
   <div>
-    <button id="new">
-      <a href="/images/new">Add a new Sunset Picture</a>
-    </button>
+    <form action="/images/new/">
+      <input type="submit" value="Submit New Image" />
+    </form>
 
-    <button id="all"><a href="/">Return Home</a></button>
+    <form action="/">
+      <input type="submit" value="Take me Home!" />
+    </form>
   </div>
 </body>
 

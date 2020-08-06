@@ -28,7 +28,6 @@ router.get("/", (req, res) => {
 });
 //New Route
 router.get("/new", (req, res) => {
-  console.log(req.user.id)
   res.render("images/new.ejs", {
     userId: req.user.id,
   });
@@ -52,7 +51,7 @@ router.post("/", parser.single("image"), (req, res) => {
 });
 
 //Edit route
-router.get("/:id/edit", (req, res) => {
+router.get("/:id/edit", (req, res,) => {
   Sunsets.findByPk(req.params.id).then((imageToEdit) => {
     res.render("images/edit.ejs", {
       image: imageToEdit,

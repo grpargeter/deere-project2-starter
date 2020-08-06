@@ -11,21 +11,29 @@
 
 <body>
   <nav>
-    <button id="sign"><a href="/auth/signup">Sign Up</a></button>
-    <button id="login"><a href="/auth/login">Log In</a></button>
-    <button id="logout"><a href="/auth/logout">Log Out</a></button>
+    <form action="/auth/login">
+      <input type="submit" value="LOGIN" />
+    </form>
+    <form action="/auth/logout">
+      <input type="submit" value="LOGOUT" />
+    </form>
+    <form action="/auth/signup">
+      <input type="submit" value="SIGNUP" />
+    </form>
   </nav>
   <h1>The Sunset Connection...Welcome!!</h1>
-  <h3>A place to view and share sunset pictures.</h3>
-
-  <img id="homeimg" src="https://res.cloudinary.com/do6js4ole/image/upload/v1596486943/thedock_wkzhok.jpg"
-    alt="homepage" />
-
+  <h3>The place to view and share sunset pictures.</h3>
+  <div id="himg">
+    <img src="https://res.cloudinary.com/do6js4ole/image/upload/v1596486943/thedock_wkzhok.jpg" alt="homepage" />
+    <img src="https://res.cloudinary.com/do6js4ole/image/upload/v1596480256/burnett2_cwrsaz.jpg" alt="homepage" />
+  </div>
   <div>
-    <button id="new">
-      <a href="/images/new">Submit New Image</a>
-    </button>
-    <button id="all"><a href="/images">View Current Gallery</a></button>
+    <form action="/images/new/">
+      <input type="submit" value="Submit New Image" />
+    </form>
+    <form action="/images/">
+      <input type="submit" value="View The Gallery " />
+    </form>
   </div>
 </body>
 
