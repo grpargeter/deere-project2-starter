@@ -20,10 +20,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
-  height: 35%;
-  border: black;
-  transition: width 2s, height 4s;
+
 }
 h1 {
   font-size: 50px;
@@ -52,6 +49,7 @@ text-align: center;
   
 
 h3 {
+  font-size: 25px;
   animation-duration: 3s;
 animation-name:slidein;
   text-align: center;
@@ -69,3 +67,7 @@ nav {
   flex-direction: row;
   text-align: center;
 }
+
+  
+
+
